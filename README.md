@@ -1,1 +1,1 @@
-# LIRI-Node-Inquirer
+# LIRI
