@@ -37,7 +37,7 @@ https://github.com/amandat85/LIRI-Node-Inquirer
     * moment
     * node-spotify-api
 
-You should not be ready to run the application.
+You should now be ready to run the application.
 
 ## How it works
 1. Open up your terminal
@@ -52,7 +52,9 @@ node liri.js
     * For `Song`, type in the song you would like information about. If you leave it blank, the application will search for information about the song "I Saw the Sign" by Ace of Base.
     * For `Band/Artist`, type in the band or artist you would like information about. If you leave it blank, the application will search for information about the artist Drake.
     * `Do What it Says` will search a surpise song store in a text file!
-6. To search another categorie, go back to step 3 and repeat.
+6. To search another category, go back to step 3 and repeat.
+
+Please watch this video demo: https://drive.google.com/file/d/1c--mNRM1Ws_U1ROW1YHpFIsWNEfG61rX/view?usp=sharing
 
 Enjoy!
 

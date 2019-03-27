@@ -20,7 +20,6 @@ inquirer.prompt([
     }
 ])
     .then(function (inquirerResponse) {
-        console.log(inquirerResponse.searchOptions.slice())
         //MOVIE SEARCH=======================================================
         if (inquirerResponse.searchOptions.slice() === "Movie") {
             inquirer.prompt([
@@ -104,7 +103,6 @@ inquirer.prompt([
                         .catch(function (error) {
                             console.log(error);
                         });
-
                 })
         }
         else if (inquirerResponse.searchOptions.slice() === "Do What it Says") {
@@ -112,11 +110,7 @@ inquirer.prompt([
                 if (error) {
                     return console.log(error);
                 }
-                console.log(data);
-
-                var dataArr = data.split(",");
-                console.log(dataArr[1]);
-                spotify.search({
+                var dataArr = data.split(",");                spotify.search({
                     type: "artist,track",
                     query: dataArr[1],
                 }, function (err, response) {
