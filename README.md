@@ -1,4 +1,4 @@
-# LIRI
+# LIRI-Node-Inquirer
  LIRI is a _Language_ Interpretation and Recognition Interface. LIRI will be a command line node app that takes in parameters and gives you back data. This LIRI node application uses the Inquirer node module for user input.
 
 ## Repository 
