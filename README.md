@@ -51,6 +51,9 @@ https://github.com/amandat85/LIRI-Node-Inquirer
 You should now be ready to run the application.
 
 ## How it works
+
+Please watch this video demo: https://drive.google.com/file/d/1c--mNRM1Ws_U1ROW1YHpFIsWNEfG61rX/view?usp=sharing
+
 1. Open up your terminal
 2. Navigate to your LIRI-Node-Inquirer directory
 3. Once there, type in the following command:
@@ -65,8 +68,7 @@ node liri.js
     * `Do What it Says` will search a surpise song store in a text file!
 6. To search another category, go back to step 3 and repeat.
 
-Please watch this video demo: https://drive.google.com/file/d/1c--mNRM1Ws_U1ROW1YHpFIsWNEfG61rX/view?usp=sharing
-
 Enjoy!
 
-
+## License
+MIT
