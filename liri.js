@@ -89,7 +89,7 @@ inquirer.prompt([
                 .then(function (inquirerResponse) {
                     axios.get("https://rest.bandsintown.com/artists/" + inquirerResponse.band + "/events?app_id=codingbootcamp")
                         .then(function (response) {
-                            for (var i = 0; i < response.data.length; i++) {
+                            for (var i = 0; i < 5; i++) {
                                 let concertResults = "--------------------------------------------------------------------" +
                                     "\nVenue Name: " + response.data[i].venue.name +
                                     "\nVenue Location: " + response.data[i].venue.city +
