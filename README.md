@@ -9,9 +9,11 @@ https://github.com/amandat85/LIRI-Node-Inquirer
 
  1. Clone/download the repository for the following github page: https://github.com/amandat85/LIRI-Node-Inquirer.
  2. Create a .gitignore file. In this .gitignore file add the following file names:
+    ```
     .DS_Store
     node_modules
     .env
+    ```
 3. Create a .env file. In this file you will add the following:
     ```
     exports.spotify = {
