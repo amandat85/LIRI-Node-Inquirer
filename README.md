@@ -4,6 +4,15 @@
 ## Repository 
 https://github.com/amandat85/LIRI-Node-Inquirer
 
+## Languages, Tools and Techologies
+* JavaScript
+* Node.js
+* NPM
+* API, Spotify, OMDB, Bands In Town
+* Axios
+* Inquirer
+* Moment
+
  ## Setup Files
  To use LIRI you will need install and create certain files to get it to run.
 
