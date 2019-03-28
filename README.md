@@ -49,7 +49,7 @@ node liri.js
 4. Answer the question by using the arrow keys to select from the list.
 5. Once you select a category, the process is the same for each.
     * For `Movie`, type in a movie you would like information about. If you leave it blank, the application will search for information about the movie "Mr. Nobody."
-    * For `Song`, type in the song you would like information about. If you leave it blank, the application will search for information about the song "I Saw the Sign" by Ace of Base.
+    * For `Song`, type in the song you would like information about. If you leave it blank, the application will search for information about the song "The Sign" by Ace of Base.
     * For `Band/Artist`, type in the band or artist you would like information about. If you leave it blank, the application will search for information about the artist Drake.
     * `Do What it Says` will search a surpise song store in a text file!
 6. To search another category, go back to step 3 and repeat.

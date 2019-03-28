@@ -1,7 +1,5 @@
-//Get the dotenv node modules
+//REQUIRE ===========================================================================================================================
 require("dotenv").config();
-
-//Require keys that store spotify keys from .env
 const keys = require("./keys.js");
 let Spotify = require("node-spotify-api");
 let spotify = new Spotify(keys.spotify);
@@ -10,7 +8,7 @@ let moment = require("moment");
 let inquirer = require("inquirer")
 let fs = require("fs");
 
-//SEARCH OPTIONS=========================================================
+//SEARCH OPTIONS ====================================================================================================================
 inquirer.prompt([
     {
         type: "list",
@@ -20,18 +18,18 @@ inquirer.prompt([
     }
 ])
     .then(function (inquirerResponse) {
-        //MOVIE SEARCH=======================================================
+        //MOVIE SEARCH ==============================================================================================================
         if (inquirerResponse.searchOptions.slice() === "Movie") {
             inquirer.prompt([
                 {
                     type: "input",
                     message: "Which movie would would you like to search?",
-                    name: "movieQuery",
+                    name: "movie",
                     default: "Mr. Nobody"
                 }
             ])
                 .then(function (inquirerResponse) {
-                    axios.get("http://www.omdbapi.com/?t=" + inquirerResponse.movieQuery + "&y=&plot=short&apikey=trilogy")
+                    axios.get("http://www.omdbapi.com/?t=" + inquirerResponse.movie + "&y=&plot=short&apikey=trilogy")
                         .then(function (response) {
                             let = movieResults = "--------------------------------------------------------------------" +
                                 "\nTitle " + response.data.Title +
@@ -50,20 +48,20 @@ inquirer.prompt([
                         });
                 })
         }
-        //SONG SEARCH=========================================================
+        //SONG SEARCH================================================================================================================
         else if (inquirerResponse.searchOptions.slice() === "Song") {
             inquirer.prompt([
                 {
                     type: "input",
                     message: "Which song would you like information about?",
-                    name: "songQuery",
+                    name: "song",
                     default: "The Sign:Ace of Base"
                 }
             ])
                 .then(function (inquirerResponse) {
                     spotify.search({
                         type: "artist,track",
-                        query: inquirerResponse.songQuery,
+                        query: inquirerResponse.song,
                     }, function (err, response) {
                         if (err) {
                             return console.log("Error occurred: " + err);
@@ -78,7 +76,7 @@ inquirer.prompt([
                     })
                 })
         }
-        //BAND/ARTIST CONCERT SEARCH=================================================
+        //BAND/ARTIST CONCERT SEARCH ================================================================================================
         else if (inquirerResponse.searchOptions.slice() === "Band/Artist") {
             inquirer.prompt([
                 {
@@ -105,12 +103,13 @@ inquirer.prompt([
                         });
                 })
         }
+        //DO WHAT IT SAYS ==========================================================================================================
         else if (inquirerResponse.searchOptions.slice() === "Do What it Says") {
             fs.readFile("random.txt", "utf8", function (error, data) {
                 if (error) {
                     return console.log(error);
                 }
-                var dataArr = data.split(",");                spotify.search({
+                let dataArr = data.split(","); spotify.search({
                     type: "artist,track",
                     query: dataArr[1],
                 }, function (err, response) {
